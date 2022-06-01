@@ -105,6 +105,7 @@ main {
 header#header {
     background-color: var(--secondary-color);
     height: calc(3vw + 3vh);
+    z-index: 5;
 }
 
 nav#header-main-nav {
@@ -247,7 +248,8 @@ color: rgb(255, 255, 255);
 font-size: 3rem;
 }
 
-.info-content-block-title {
+.info-content-block-title,
+.service-title {
     font-size: 1.8rem;
     color: rgb(97, 91, 91);
     padding-bottom: 0.7rem;
@@ -257,9 +259,72 @@ font-size: 3rem;
 .info-content-block-para {
     font-size: 1.5rem;
     color: rgb(97, 91, 91);
+}
+
+section#services {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #4ca1d3;
+}
+
+.services {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.other-services {
+  padding-top: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  /* border: 5px solid red; */
+}
+
+.service-title {
+  font-size: 2rem;
+    color: rgb(54, 52, 52);
+}
+
+.services-dementia {
+  /* Lower so the words will wrap */
+  width: 35%;
+  right: 0;
+  /* border-style: solid; */
+  top: 0;
+}
+
+.services-dementia-para {
+  color: blanchedalmond;
+  font-size: 2rem;
+  padding-bottom: 10px;
+}
+
+.services-personal-care {
+  /* border: 5px solid blue; */
+  word-wrap: break-word;
 
 }
 
+ul.services-personal-care-li li {
+
+  color: white;
+font-size: 1.7rem;
+padding-bottom: 0.5rem;
+}
+
+ul.services-companionship-li li {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+color: white;
+font-size: 1.5rem;
+padding-bottom: 1rem;
+}
 
 /*-*-*-*-**-*-*-*-**-*-*-*-**-*-*-*-* Media Queries *-*-*-*-**-*-*-*-**-*-*-*-**-*-*-*-*/
 
@@ -290,8 +355,41 @@ font-size: 3rem;
         color: rgb(255, 255, 255);
         font-size: 2rem;
         }
+    .other-services,
+    .services-dementia,
+    .services-personal-care,
+    .services-personal-care ul {
+      display: flex;
+  flex-direction: column;
+  align-items: center;
+    }
+
+    .services-dementia,
+    .services {
+      width: 75%;
+    }
+
+    .services-personal-care {
+      width: 100%;
+    }
+
+    .services-dementia p{
+      font-size: 1.8rem;
+    }
+
+    ul.services-personal-care-li li {
+      font-size: 1.6rem;
+    }
 
   }
+
+
+  /* @media screen and (max-width: 380px) { 
+    ul.services-personal-care-li li:nth-child(5) {
+      font-size: 1.4rem;
+      left: 55%;
+    }
+  } */
 
 @media screen and (max-width: 610px) {
 
