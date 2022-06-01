@@ -242,11 +242,21 @@ section#info {
 }
 
 /* Index info text styling */
-.info-content-title {
+.info-content-main-title {
+color: rgb(255, 255, 255);
+font-size: 3rem;
+}
+
+.info-content-block-title {
+    font-size: 1.8rem;
+    color: rgb(97, 91, 91);
+    padding-bottom: 0.7rem;
 
 }
 
 .info-content-block-para {
+    font-size: 1.5rem;
+    color: rgb(97, 91, 91);
 
 }
 
@@ -275,6 +285,12 @@ section#info {
     section#showcase {
       background-position: 60%;
     }
+
+    .info-content-main-title {
+        color: rgb(255, 255, 255);
+        font-size: 2rem;
+        }
+
   }
 
 @media screen and (max-width: 610px) {
