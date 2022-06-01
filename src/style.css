@@ -96,7 +96,7 @@ ul.side-nav__content--social a i:active {
 /* Main content ------ ---------- ------------------*/
 
 
-/* All content container (Main element) ------ ---------- ------------------*/
+/* All page content container (Main element) ------ ---------- ------------------*/
 main {
     flex: 1;
 }
@@ -216,6 +216,40 @@ div.showcase-content {
   transform: scaleX(1);
   transform-origin: left;
 }
+
+section#info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: var(--tertiary-color);
+   
+}
+
+.info-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Index information blocks */
+.info-content-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+/* Index info text styling */
+.info-content-title {
+
+}
+
+.info-content-block-para {
+
+}
+
 
 /*-*-*-*-**-*-*-*-**-*-*-*-**-*-*-*-* Media Queries *-*-*-*-**-*-*-*-**-*-*-*-**-*-*-*-*/
 
