@@ -391,7 +391,7 @@ section#contact {
 }
 
 section#map-area {
-  height: 40vh;
+  height: 60vh;
     background-image: url(img/pglang.gif);
     background-size: cover;
     background-position: center;
@@ -400,6 +400,34 @@ section#map-area {
 section#map-area button {
   margin-top: 10px;
   margin-left: 10px;
+}
+
+section#footer {
+  background-color: #065d8f;
+  height: 35vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* .footer hr{
+  color: white;
+  width: calc(1px + 70vh)
+} */
+
+.footer p {
+  padding-top: 2rem;
+  color: white;
+  font-size: 1.5rem;
 }
 
 /*-*-*-*-**-*-*-*-**-*-*-*-**-*-*-*-* Media Queries *-*-*-*-**-*-*-*-**-*-*-*-**-*-*-*-*/
@@ -563,4 +591,9 @@ section#map-area button {
       ul.header-main-nav-links li.fade {
         opacity: 1;
       }
+
+      .footer p {
+        font-size: calc(0.5rem + 0.8vh)
+      }
+
     }
