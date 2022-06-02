@@ -223,12 +223,14 @@ div.showcase-content {
   color: white;
   border-radius: 60px;
   width: 120px;
-  height: 30%;
+  height: 50px;
   
 }
 
 .showcase-content button:hover,
-.showcase-content button:active {
+.showcase-content button:active,
+.contact button:hover,
+.contact button:active {
   background-color: #0b76b4;
   cursor: pointer;
   transition: background-color 0.35s cubic-bezier(0.68, -0.55, 0.265, 1.55);
@@ -340,6 +342,47 @@ ul.services-companionship-li li {
 color: white;
 font-size: 1.5rem;
 padding-bottom: 1rem;
+}
+
+section#contact {
+  display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  background-color: #0b76b4;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact h2 {
+  padding-bottom: 0.3rem;
+}
+
+.contact-us-headers {
+  font-size: 2rem;
+    color: rgb(63, 25, 25);
+}
+
+.contact-us-para, .contact-us-number {
+  font-size: 1.5rem;
+  padding-bottom: 0.5rem;
+  color: #041d1b;
+}
+
+.contact-us-number {
+  color: #02ffea;
+}
+
+.contact button {
+  background-color: var(--secondary-color-m);
+  color: white;
+  border-radius: 60px;
+  width: 120px;
+  height: 40px;
 }
 
 /*-*-*-*-**-*-*-*-**-*-*-*-**-*-*-*-* Media Queries *-*-*-*-**-*-*-*-**-*-*-*-**-*-*-*-*/
