@@ -218,6 +218,22 @@ div.showcase-content {
   transform-origin: left;
 }
 
+.showcase-content button {
+  background-color: var(--secondary-color-m);
+  color: white;
+  border-radius: 60px;
+  width: 120px;
+  height: 30%;
+  
+}
+
+.showcase-content button:hover,
+.showcase-content button:active {
+  background-color: #0b76b4;
+  cursor: pointer;
+  transition: background-color 0.35s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
 section#info {
     display: flex;
     flex-wrap: wrap;
