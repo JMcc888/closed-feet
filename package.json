@@ -1,0 +1,20 @@
+{
+  "name": "closed-feet",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JMcc888/closed-feet.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JMcc888/closed-feet/issues"
+  },
+  "homepage": "https://github.com/JMcc888/closed-feet#readme"
+}
