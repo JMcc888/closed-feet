@@ -430,6 +430,21 @@ section#footer {
   font-size: 1.5rem;
 }
 
+
+.about-us-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-us-item {
+  display: flex;
+}
+
+.about-us-item-1 {
+  flex-direction: row-reverse;
+}
+
 /*-*-*-*-**-*-*-*-**-*-*-*-**-*-*-*-* Media Queries *-*-*-*-**-*-*-*-**-*-*-*-**-*-*-*-*/
 
 /*-*-*-*-**-*-*-*-**-*-*-*-**-*-*-*-* (max-width:1510px) Mark *-*-*-*-**-*-*-*-**-*-*-*-**-*-*-*-*/
