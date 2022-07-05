@@ -430,19 +430,41 @@ section#footer {
   font-size: 1.5rem;
 }
 
-
-.about-us-content {
+/* About us page content */
+section#about-us-content {
   display: flex;
   justify-content: center;
+  flex-direction: column;
   align-items: center;
 }
 
 .about-us-item {
   display: flex;
+  width: 80%;
 }
 
 .about-us-item-1 {
   flex-direction: row-reverse;
+}
+
+.about-us-item-text {
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.about-us-item-title {
+  font-size: 1.6rem;
+}
+
+.about-us-item-para {
+  font-size: 1.4rem;
+}
+
+.about-us-img {
+  width: 30rem;
 }
 
 /*-*-*-*-**-*-*-*-**-*-*-*-**-*-*-*-* Media Queries *-*-*-*-**-*-*-*-**-*-*-*-**-*-*-*-*/
