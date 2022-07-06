@@ -689,7 +689,7 @@ section#about-us-content {
     /* Fix the text position for larger screens */
     @media screen and (min-width: 1080px) {
       .about-us-item-text {
-        color: red;
+        /* color: red; */
         display: flex;
         justify-content: center;
         align-items: center;
