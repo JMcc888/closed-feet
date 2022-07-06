@@ -218,7 +218,8 @@ div.showcase-content {
   transform-origin: left;
 }
 
-.showcase-content button {
+.showcase-content button,
+.contact-us-body-form button {
   background-color: var(--secondary-color-m);
   color: white;
   border-radius: 60px;
@@ -232,7 +233,9 @@ div.showcase-content {
 .contact button:hover,
 .contact button:active,
 section#map-area button:hover,
-section#map-area button:active {
+section#map-area button:active,
+.contact-us-body-form button:hover,
+.contact-us-form button:active {
   background-color: #0b76b4;
   cursor: pointer;
   transition: background-color 0.35s cubic-bezier(0.68, -0.55, 0.265, 1.55);
@@ -504,18 +507,78 @@ section#contact-us {
 .contact-us-form {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 50%;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 80%;
+  height: 44rem;
   background-color: #ececec;
   border-style: groove;
+  padding: 1rem;
 
 }
 
-.contact-us-body-text {
-  background-color: #4ca1d3;
-  width: 50%;
+.contact-us-form label {
+  color:#0b76b4;
+  font-size: 1.9rem;
+}
 
+.contact-us-form input
+{
+  width: 80%;
+  padding: 1rem;
+  margin: 0.2rem;
+}
+
+.contact-us-form input:nth-child(8) {
+  height: 2px;
+  width: 90%;
+}
+
+
+.contact-us-body-form button{
+  align-self: center;
+}
+
+.contact-us-body-text {
+  display: flex;
+  flex-direction: column;
+  background-color: #4ca1d3;
+  width: 70%;
+  align-items: center;
+  justify-content: center;
+  word-wrap: break-word;
+}
+
+.wrap {
+  width: 80%;
+  overflow: hidden;
+}
+
+.contact-us-body-text h1 {
+  font-size: 4rem;
+  top: 0;
+}
+
+.contact-us-body-text p {
+  font-size: 2.2rem;
+}
+
+textarea {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+
+  width: 100%;
+}
+
+.contact-us-body-form textarea {
+  height: 20%;
+  margin-bottom: 1rem;
+}
+
+.contact-us-body-form textarea:focus,
+.contact-us-body-form input:focus {
+  border: 2px solid #84c3e7
 }
 
 /*-*-*-*-**-*-*-*-**-*-*-*-**-*-*-*-* Media Queries *-*-*-*-**-*-*-*-**-*-*-*-**-*-*-*-*/
@@ -741,5 +804,41 @@ section#contact-us {
       .about-us-item-title {
         font-size: 2.2rem;
 
+      }
+    }
+
+    @media screen and (max-width: 700px) {
+      .contact-us-body {
+        flex-direction: column-reverse;
+      }
+      .contact-us-body-form {
+        width: 100%;
+        height: 70vh;
+        
+      }
+      .contact-us-body-text {
+        width: 100%;
+        height: 50vh;  
+      }
+      .contact-us-body-text h1{
+        font-size: 2.5rem;  
+      }
+      .wrap p {
+        font-size: 2rem;
+      }
+
+      @media screen and (max-width: 500px) {
+
+        .wrap {
+          width: 95%;
+        }
+
+        .wrap p {
+        font-size: 1.6rem;
+      }
+
+      .contact-us-body-text {
+        width: 100%;
+      }
       }
     }
