@@ -478,7 +478,45 @@ section#about-us-content {
   font-size: 2rem;
   font-weight: 100;
   padding: 1.5rem 0;
-} 
+}
+
+section#contact-us {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-us-body {
+  background-color: aqua;
+  display: flex;
+  flex-direction: row-reverse;
+  height: 100vh;
+}
+
+.contact-us-body-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  background-color: #0958c0;
+}
+
+.contact-us-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  background-color: #ececec;
+  border-style: groove;
+
+}
+
+.contact-us-body-text {
+  background-color: #4ca1d3;
+  width: 50%;
+
+}
 
 /*-*-*-*-**-*-*-*-**-*-*-*-**-*-*-*-* Media Queries *-*-*-*-**-*-*-*-**-*-*-*-**-*-*-*-*/
 
