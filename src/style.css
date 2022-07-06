@@ -676,3 +676,32 @@ section#about-us-content {
         font-size: 2.2rem;
       }
     }
+
+    @media screen and (max-width: 1080px) {
+
+      .about-us-item-title {
+        padding-top: 3rem;
+      }
+
+     
+    }
+
+    /* Fix the text position for larger screens */
+    @media screen and (min-width: 1080px) {
+      .about-us-item-text {
+        color: red;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .about-us-item-para {
+        font-size: 1.8rem;
+
+      }
+
+      .about-us-item-title {
+        font-size: 2.2rem;
+
+      }
+    }
