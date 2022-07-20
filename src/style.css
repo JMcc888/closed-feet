@@ -659,6 +659,10 @@ section#apply h4 {
   font-size: 2rem;
 }
 
+section#apply h2 {
+  font-size: 1.7rem
+}
+
 .apply-body {
   display: flex;
   flex-direction: column;
@@ -684,19 +688,54 @@ section#apply h4 {
   justify-content: center;
   flex-direction: column;
   width: 100%;
-  background-color: #84c3e7;
 }
 
-.apply-body-text {
+.apply-body-info-text,
+.apply-body-client-text,
+.apply-body-employee-text {
   width: 50%;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
+.apply-body-client {
+  /* display: flex;
+  flex-direction: row; */
+  /* background-color: #0958c0; */
+}
+
+.apply-body-client,
+.apply-body-employee {
+  width: 100%;
+}
+
+.apply-body-client-text,
+.apply-body-employee-text {
+  width: 45%;
+}
+
+.apply-body-client-text {}
+
 /* BLACK MAGIC :D*/
 .apply-body-text ul {
   align-self: center;
+}
+
+.apply-body-employee,
+.apply-body-client {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+.apply-body-client img {
+  width: 30%;
+  height: 70%;
+  align-self: flex-end;
+  justify-self: flex-end;
+  top: 50%;
 }
 
 
@@ -755,6 +794,8 @@ section#apply h4 {
     ul.services-personal-care-li li {
       font-size: 1.6rem;
     }
+
+    
 
   }
 
@@ -887,6 +928,12 @@ section#apply h4 {
      .about-us-img {
       min-width: 85%;
      }
+
+     .apply-body-info-text,
+    .apply-body-client-text,
+    .apply-body-employee-text {
+      width: 90%;
+    }
     }
 
     @media screen and (max-width: 400px) {
