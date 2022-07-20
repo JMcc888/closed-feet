@@ -646,6 +646,48 @@ section#login {
 
 /* Apply Info Content */
 
+/* actual content grab */
+.apply-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.apply-body-title {
+  background-color: #0b76b4;
+}
+
+.apply-body-title h1 {
+  font-size: 3rem;
+}
+
+.apply-body-title h2 {
+  font-size: 1.8rem;
+}
+
+.apply-body-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+.apply-body-text {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* BLACK MAGIC :D*/
+.apply-body-text ul {
+  align-self: center;
+}
+
+.apply-body-info p,
+.apply-body-info li{
+  font-size: 1.5rem;
+}
 
 
 /*-*-*-*-**-*-*-*-**-*-*-*-**-*-*-*-* Media Queries *-*-*-*-**-*-*-*-**-*-*-*-**-*-*-*-*/
