@@ -220,7 +220,7 @@ div.showcase-content {
 
 .showcase-content button,
 .contact-us-body-form button,
-.login-form ,
+.login-form button,
 .apply-body-client button,
 .apply-body-employee button {
   background-color: var(--secondary-color-m);
@@ -703,12 +703,6 @@ section#apply h2 {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-.apply-body-client {
-  /* display: flex;
-  flex-direction: row; */
-  /* background-color: #0958c0; */
 }
 
 .apply-body-client,
