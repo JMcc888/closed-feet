@@ -13,15 +13,18 @@
 
   /************ Custom Properties ***********/
 
+  /* I don't even know what these terms mean. */
   --primary-color: #000000;
 
-  --secondary-color: #073f88;
+  --secondary-color: #ac0202;
 
-  --secondary-color-m: #030124;
+  --secondary-color-m: #750404;
   
-  --tertiary-color: #84c3e7;
+  --tertiary-color: #ffaeae;
 
   --tertiary-color-m: #c5bbbb;
+
+  --button-hover-color: #ff6969;
 
 }
 
@@ -90,7 +93,7 @@ aside#side-nav {
 
 ul.side-nav__content--social a i:hover,
 ul.side-nav__content--social a i:active { 
-  color: var(--tertiary-color)
+  color: var(--button-hover-color)
 }
 
 /* Main content ------ ---------- ------------------*/
@@ -142,7 +145,7 @@ ul.header-main-nav-links li a:active {
 /* Shooooooooooooooooooooooowcase*/
 section#showcase{
     height: 100vh;
-    background-image: url(img/pglang.gif);
+    background-image: url(img/DYA.gif);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -162,14 +165,6 @@ div.showcase-content {
     flex-direction: column;
     justify-content: space-between;
 
-    animation: hero 1.8s cubic-bezier(0.68, -0.55, 0.27, 1.55);
-}
-
-@keyframes hero {
-    0% {
-        transform: translateX(100rem) rotate(360deg);
-        opacity: 1;
-    }
 }
 
 .showcase-content-title {
@@ -245,7 +240,7 @@ section#map-area button:active,
 .apply-body-employee button:hover,
 .apply-body-client button:active,
 .apply-body-employee button:active {
-  background-color: #0b76b4;
+  background-color: var(--button-hover-color);
   cursor: pointer;
   transition: background-color 0.35s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
@@ -254,7 +249,6 @@ section#info {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    background-color: var(--tertiary-color);
    
 }
 
@@ -276,28 +270,27 @@ section#info {
 
 /* Index info text styling */
 .info-content-main-title {
-color: rgb(255, 255, 255);
 font-size: 3rem;
 }
 
 .info-content-block-title,
 .service-title {
     font-size: 1.8rem;
-    color: rgb(97, 91, 91);
+    color: rgb(0, 0, 0);
     padding-bottom: 0.7rem;
 
 }
 
 .info-content-block-para {
     font-size: 1.5rem;
-    color: rgb(97, 91, 91);
+    color: rgb(0, 0, 0);
 }
 
 section#services {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    background-color: #4ca1d3;
+    background-color: #ffffff;
 }
 
 .services {
@@ -319,7 +312,7 @@ section#services {
 
 .service-title {
   font-size: 2rem;
-    color: rgb(54, 52, 52);
+    color: rgb(0, 0, 0);
 }
 
 .services-dementia {
@@ -331,7 +324,7 @@ section#services {
 }
 
 .services-dementia-para {
-  color: blanchedalmond;
+  color: rgb(0, 0, 0);
   font-size: 2rem;
   padding-bottom: 10px;
 }
@@ -344,7 +337,7 @@ section#services {
 
 ul.services-personal-care-li li {
 
-  color: white;
+  color: rgb(0, 0, 0);
 font-size: 1.7rem;
 padding-bottom: 0.5rem;
 }
@@ -353,7 +346,7 @@ ul.services-companionship-li li {
   display: flex;
   align-items: center;
   flex-direction: column;
-color: white;
+color: rgb(0, 0, 0);
 font-size: 1.5rem;
 padding-bottom: 1rem;
 }
@@ -362,7 +355,7 @@ section#contact {
   display: flex;
     flex-wrap: wrap;
     justify-content: center;
-  background-color: #0b76b4;
+  background-color: #ffffff;
   padding-bottom: 2rem;
 }
 
@@ -372,6 +365,7 @@ section#contact {
   align-items: center;
   justify-content: center;
   width: 80%;
+  margin: 4rem;
 }
 
 .contact h2 {
@@ -380,18 +374,18 @@ section#contact {
 
 .contact-us-headers {
   font-size: 2rem;
-    color: rgb(63, 25, 25);
+    color: rgb(0, 0, 0);
 }
 
 .contact-us-para, .contact-us-number {
   font-size: 1.5rem;
   padding-bottom: 0.5rem;
-  color: rgb(219, 214, 214);
+  color: rgb(0, 0, 0);
 
 }
 
 .contact-us-number {
-  color: #02ffea;
+  color: var(--secondary-color);
 }
 
 .contact button, section#map-area button {
@@ -415,7 +409,7 @@ section#map-area button {
 }
 
 section#footer {
-  background-color: #065d8f;
+  background-color: var(--secondary-color-m);
   height: 35vh;
   display: flex;
   align-items: center;
@@ -499,7 +493,6 @@ section#contact-us {
 
 /* Culprit... */
 .contact-us-body {
-  background-color: aqua;
   display: flex;
   flex-direction: row-reverse;
   height: 100vh;
@@ -511,7 +504,7 @@ section#contact-us {
   justify-content: center;
   align-items: center;
   width: 50%;
-  background-color: #0958c0;
+  background-color: var(--button-hover-color);
   padding: 2rem;
 }
 
@@ -530,7 +523,7 @@ section#contact-us {
 
 .contact-us-form label,
 .login-form {
-  color:#0b76b4;
+  color:var(--secondary-color);
   font-size: 1.9rem;
 }
 
@@ -555,7 +548,7 @@ section#contact-us {
 .contact-us-body-text {
   display: flex;
   flex-direction: column;
-  background-color: #4ca1d3;
+  background-color: aliceblue;
   width: 70%;
   align-items: center;
   justify-content: center;
@@ -591,7 +584,7 @@ textarea {
 
 .contact-us-body-form textarea:focus,
 .contact-us-body-form input:focus {
-  border: 2px solid #84c3e7
+  border: 2px solid var(--button-hover-color)
 }
 
 /* Login Page Content */
@@ -715,7 +708,6 @@ section#apply h2 {
   width: 45%;
 }
 
-.apply-body-client-text {}
 
 /* BLACK MAGIC :D*/
 .apply-body-text ul {
