@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Closed Feet Funeral Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!--Google fonts-->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;1,300&family=Oswald:wght@200;300&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- FontAwesome Icons -->
+
+    <script
+      src="https://kit.fontawesome.com/fc8f7ea611.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+
+    <!--Main Stylesheet-->
+
+    <link rel="stylesheet" href="src/style.css" />
+  </head>
+
+  <body>
+    <!--Side Nav-->
+    <aside id="side-nav">
+      <div class="side-nav__content">
+        <div class="side-nav__content--logo">
+          <a href="/index.html"><img src="src/img/ohlogo.webp" alt="logo" /></a>
+        </div>
+        <ul class="side-nav__content--social">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href=""><i class="fa-brands fa-tiktok"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </ul>
+      </div>
+    </aside>
+    <!--Main Content-->
+    <main>
+      <!--Main Nav-->
+      <header id="header">
+        <nav id="header-main-nav">
+          <div class="header-main-nav-hamburger">
+            <div class="line line-1"></div>
+            <div class="line line-2"></div>
+            <div class="line line-3"></div>
+          </div>
+          <ul class="header-main-nav-links">
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/whosapplying.html">Apply</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+            <li><a href="#">Placeholder</a></li>
+            <li><a href="/login.html">Login</a></li>
+          </ul>
+        </nav>
+      </header>
+      <div class="users-config-body">
+        <h1>Manage users</h1>
+        <div class="users-config-body-table client-table">
+          <div class="client-table-header table-header">
+            <h2>Manage Clients</h2>
+            <!-- Button trigger modal -->
+            <button
+              type="button"
+              class="btn btn-success"
+              data-toggle="modal"
+              data-target="#clientModalCenter"
+            >
+              Add a Client
+            </button>
+          </div>
+          <table class="table table-hover table-dark">
+            <caption>
+              Probably going to be Array .length here.
+            </caption>
+            <thead>
+              <tr>
+                <th scope="col">First</th>
+                <th scope="col">Last</th>
+                <th scope="col">Doctor</th>
+                <th scope="col">Edit</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>Dr. Saul</td>
+                <td><button class="btn btn-primary">Edit</button></td>
+              </tr>
+              <tr>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>Dr. Barber</td>
+                <td><button class="btn btn-primary">Edit</button></td>
+              </tr>
+              <tr>
+                <td>Larry the Bird</td>
+                <td>Da Bird</td>
+                <td>Dr. Wam</td>
+                <td><button class="btn btn-primary">Edit</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- Doctors Table -->
+        <div class="client-table-header table-header">
+            <h2>Manage Doctors</h2>
+            <!-- Button trigger modal -->
+            <button
+              type="button"
+              class="btn btn-primary"
+            >
+              Add a Doctor
+            </button>
+          </div>
+          <table class="table table-hover table-light">
+            <caption>
+              Probably going to be Array .length here too.
+            </caption>
+            <thead>
+              <tr>
+                <th scope="col">First</th>
+                <th scope="col">Last</th>
+                <th scope="col">Email</th>
+                <th scope="col">Phone</th>
+                <th scope="col">Edit</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>Wig@Wam.com</td>
+                <td>843-777-9311</td>
+                <td><button class="btn btn-primary">Edit</button></td>
+              </tr>
+              <tr>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>Wig@Wam.com</td>
+                <td>843-777-9311</td>
+                <td><button class="btn btn-primary">Edit</button></td>
+              </tr>
+              <tr>
+                <td>Larry the Bird</td>
+                <td>Da Bird</td>
+                <td>Wig@Wam.com</td>
+                <td>843-777-9311</td>
+                <td><button class="btn btn-primary">Edit</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- Modal -->
+        <div
+          class="modal fade"
+          id="clientModalCenter"
+          tabindex="-1"
+          role="dialog"
+          aria-labelledby="clientModalCenterTitle"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="clientModalLongTitle">
+                  Client Modal
+                </h5>
+                <button
+                  type="button"
+                  class="close"
+                  data-dismiss="modal"
+                  aria-label="Close"
+                >
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <!-- Client Modal Inputs -->
+              <!-- Gonna slap this here early -->
+              <div class="modal-body">
+                <form action="/clients/<%=data._id%>?_method=PUT" method="POST">
+                  <small id="passwordHelpInline" class="text-muted">
+                    Enter the client's first name
+                  </small>
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="title"
+                    value=""
+                    autofocus
+                  />
+
+                  <small id="passwordHelpInline" class="text-muted">
+                    Enter the client's last name.
+                  </small>
+
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="start"
+                    value=""
+                    autofocus
+                  />
+                  <small id="passwordHelpInline" class="text-muted">
+                    Select the client's doctor.
+                  </small>
+
+                  <select class="custom-select" value="">
+                    <option value="">Select Owner</option>
+                    <option>Wig</option>
+                    <option>Wam</option>
+                    <option>Dee</option>
+                    <option>Yo</option>
+                  </select>
+
+                  <button
+                    type="button submit"
+                    class="btn btn-primary form-control"
+                  >
+                    Add Client
+                  </button>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-dismiss="modal"
+                >
+                  Close
+                </button>
+                <button type="button" class="btn btn-primary">
+                  Save changes
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <section id="footer">
+        <div class="footer">
+          <p>
+            Copyright © 2022 Closed Feet Funeral Homes LLC - All Rights
+            Reserved.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <script src="src/js/nav.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

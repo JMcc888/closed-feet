@@ -504,7 +504,7 @@ section#contact-us {
   justify-content: center;
   align-items: center;
   width: 50%;
-  background-color: var(--button-hover-color);
+  background-color: aliceblue;
   padding: 2rem;
 }
 
@@ -731,6 +731,38 @@ section#apply h2 {
 }
 
 /* Dashboard Content */
+
+/* Users Panel Content */
+.users-config-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.users-config-body h1 {
+  margin: 0 auto;
+}
+
+.client-table-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+
+
+.client-table {
+
+}
+
+.table-header {
+  margin: 1.5rem;
+}
+
+.table-header button {
+  padding: 1.5rem;
+  margin: 1rem;
+}
 
 
 /*-*-*-*-**-*-*-*-**-*-*-*-**-*-*-*-* Media Queries *-*-*-*-**-*-*-*-**-*-*-*-**-*-*-*-*/
