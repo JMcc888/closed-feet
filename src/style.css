@@ -738,7 +738,30 @@ section#users-dashboard {
   flex-direction: column;
 }
 
+.client-header {
+  background-color: #c5bbbb;
+}
 
+.doctor-header {
+  background-color: #ff6969;
+}
+
+.client-header,
+.doctor-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0.8rem;
+}
+
+.client-header h1 {
+  padding-bottom: 1rem;
+}
+
+.doctor-header {
+  padding-top: 1rem;
+}
 
 .client-cards,
 .doctor-cards {
