@@ -522,13 +522,17 @@ section#contact-us {
 }
 
 .contact-us-form label,
-.login-form {
+.login-form,
+.add-user-form
+ {
   color:var(--secondary-color);
   font-size: 1.9rem;
 }
 
 .contact-us-form input,
-.login-form
+.login-form,
+.add-user-form
+
 {
   width: 80%;
   padding: 1rem;
@@ -613,7 +617,8 @@ section#login {
   justify-content: center;
 }
 
-.login-form {
+.login-form,
+.add-user-form {
   display: flex;
   flex-direction: column;
   background-color: #ececec;
@@ -622,14 +627,16 @@ section#login {
   border-radius: 2vh
 }
 
-.login-form input {
+.login-form input,
+.add-user-form input{
   height: 4rem;
   padding: 2rem 0 2rem;
   margin: 1rem 0 1rem;
 }
 
 .login-form button,
-.login-form p {
+.login-form p,
+.add-user-form button {
   align-self: center;
   margin-top: 1rem;
 }
@@ -792,6 +799,24 @@ section#users-dashboard {
 .card a {
   color: #0958c0;
   font-size: small;
+}
+
+/* Add user form container */
+.add-user-form-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #ffaeae;
+}
+
+.add-user-form input {
+  font-size: 1.5rem;
+}
+
+.add-user-form select {
+  height: 4rem;
+  margin: 1rem 0 1rem;
 }
 
 
