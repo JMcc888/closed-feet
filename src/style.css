@@ -603,7 +603,7 @@ section#login {
   background-attachment: fixed;
 }
 
-.login-text {
+.form-text {
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -817,6 +817,11 @@ section#users-dashboard {
 .add-user-form select {
   height: 4rem;
   margin: 1rem 0 1rem;
+}
+
+.add-user-form button {
+  height: 4rem;
+  font-size: 1.5rem;
 }
 
 
