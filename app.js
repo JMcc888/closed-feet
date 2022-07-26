@@ -5,6 +5,7 @@ const bodyParser = require("body-parser");
 const methodOverride = require("method-override");
 
 // Local Imports
+const connectDB = require('./config/connectDB')
 
 // Load Config Variables
 dotenv.config({ path: "./config/config.env" });
@@ -25,6 +26,7 @@ const PORT = process.env.PORT || 3000;
 app.set("view engine", "ejs");
 
 // Connect to DB
+connectDB()
 
 // Route Imports
 const homePageRoutes = require("./routes/home_page_routes");
