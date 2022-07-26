@@ -145,7 +145,7 @@ ul.header-main-nav-links li a:active {
 /* Shooooooooooooooooooooooowcase*/
 section#showcase{
     height: 100vh;
-    background-image: url(img/DYA.gif);
+    background-image: url(/img/DYA.gif);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -398,7 +398,7 @@ section#contact {
 
 section#map-area {
   height: 60vh;
-    background-image: url(img/pglang.gif);
+    background-image: url(/img/pglang.gif);
     background-size: cover;
     background-position: center;
 }
@@ -597,7 +597,7 @@ section#login {
   width: 100%;
   display: flex;
   justify-content: center;
-  background-image: url(img/thanos.gif);
+  background-image: url(/img/thanos.gif);
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
