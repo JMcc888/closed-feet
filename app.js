@@ -26,7 +26,7 @@ const PORT = process.env.PORT || 3000;
 app.set("view engine", "ejs");
 
 // Connect to DB
-connectDB()
+connectDB();
 
 // Route Imports
 const homePageRoutes = require("./routes/home_page_routes");
