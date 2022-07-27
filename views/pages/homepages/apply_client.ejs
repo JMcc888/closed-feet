@@ -1,4 +1,173 @@
-<%- include('../partials/headers&footers/header') %>
+<%- include('../partials/headers&footers/bootstrap-header') %>
 <%- include('../partials/navs/apply_nav') %>
-<h1>CLIENT POLICIES AND INFO HERE</h1>
+
+<div class="apply-client-form-wrap">
+<h1>Service Provision Contact Form</h1>
+
+    <form
+        class="add-user-form"
+        action="/applications/client"
+        method="POST"
+      >
+        <small id="passwordHelpInline" class="text-muted">
+            Client's First Name
+        </small>
+        <input
+          type="text"
+          class="form-control"
+          name="first"
+          value=""
+          autofocus
+        />
+
+        <small id="passwordHelpInline" class="text-muted">
+            Client's Middle Name
+          </small>
+          <input
+            type="text"
+            class="form-control"
+            name="middle"
+            value=""
+            autofocus
+          />
+
+        <small id="passwordHelpInline" class="text-muted">
+          Client's Last Name
+        </small>
+
+        <input
+          type="text"
+          class="form-control"
+          name="last"
+          value=""
+          autofocus
+        />
+
+        <small id="passwordHelpInline" class="text-muted">
+            Client's Date of Birth
+          </small>
+  
+          <input
+            type="date"
+            class="form-control"
+            name="DOB"
+            value=""
+            autofocus
+          />
+
+          <small id="passwordHelpInline" class="text-muted">
+            Client's address
+          </small>
+  
+          <input
+            type="text"
+            class="form-control"
+            name="address"
+            value=""
+            autofocus
+          />
+
+          <small id="passwordHelpInline" class="text-muted">
+            Client's email address
+          </small>
+  
+          <input
+            type="email"
+            class="form-control"
+            name="email"
+            value=""
+            autofocus
+            placeholder="your_email@gmail.com"
+          />
+
+          <small id="passwordHelpInline" class="text-muted">
+            Client's Home Phone Number
+          </small>
+  
+          <input
+            type="text"
+            class="form-control"
+            name="home-phone"
+            value=""
+            autofocus
+          />
+
+          <small id="passwordHelpInline" class="text-muted">
+            Client's Mobile Phone Number
+          </small>
+  
+          <input
+            type="text"
+            class="form-control"
+            name="mobile-phone"
+            value=""
+            autofocus
+          />
+
+          <small id="passwordHelpInline" class="text-muted">
+            Client Emergency Contact Name
+          </small>
+  
+          <input
+            type="text"
+            class="form-control"
+            name="emergency-name"
+            value=""
+            autofocus
+          />
+
+          <small id="passwordHelpInline" class="text-muted">
+            Contact Relationship to client
+          </small>
+  
+          <input
+            type="text"
+            class="form-control"
+            name="last"
+            value=""
+            autofocus
+          />
+
+          <small id="passwordHelpInline" class="text-muted">
+            Emergency Contact Number
+          </small>
+  
+          <input
+            type="text"
+            class="form-control"
+            name="emergency-number"
+            value=""
+            autofocus
+          />
+
+          <small id="passwordHelpInline" class="text-muted">
+            Medical/Health Insurance Provider
+          </small>
+  
+          <input
+            type="text"
+            class="form-control"
+            name="first-provider"
+            value=""
+            autofocus
+          />
+
+          <small id="passwordHelpInline" class="text-muted">
+            Secondary Medical/Insurance Provider
+          </small>
+  
+          <input
+            type="text"
+            class="form-control"
+            name="secondary-provider"
+            value=""
+            autofocus
+          />
+
+
+        <button type="button submit" class="btn btn-primary form-control">
+          Submit
+        </button>
+      </form>
+</div>
 <%- include('../partials/headers&footers/footer') %>

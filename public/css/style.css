@@ -810,7 +810,8 @@ section#users-dashboard {
   background-color: #ffaeae;
 }
 
-.add-user-form input {
+.add-user-form input,
+.apply-client-form input {
   font-size: 1.5rem;
 }
 
@@ -819,11 +820,39 @@ section#users-dashboard {
   margin: 1rem 0 1rem;
 }
 
-.add-user-form button {
+.add-user-form button,
+.apply-client-form button {
   height: 4rem;
   font-size: 1.5rem;
 }
 
+.apply-client-form-wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: navajowhite;
+  }
+
+.apply-client-form {
+  width: 55%;
+}
+
+.apply-client-form small{
+  font-size: 2rem;
+}
+
+.apply-client-form input {
+  height: 1.5rem;
+  padding: 1.5rem 0 1.5rem;
+  margin: 0.7rem 0 0.7rem;
+}
+
+.apply-client-form button {
+  margin: 1rem;
+  width: 90%;
+  align-self: center;
+}
 
 /*-*-*-*-**-*-*-*-**-*-*-*-**-*-*-*-* Media Queries *-*-*-*-**-*-*-*-**-*-*-*-**-*-*-*-*/
 
