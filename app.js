@@ -51,11 +51,13 @@ connectDB();
 
 // Route Imports
 const homePageRoutes = require("./routes/home_page_routes");
-const userRoutes = require('./routes/user_routes');
+const adminRoutes = require('./routes/admin_pages_routes');
+const userRoutes = require('./routes/user_routes')
 
 // Use Routes
 app.use("/", homePageRoutes);
-// app.use('/users', userRoutes)
+app.use('/dashboard', adminRoutes)
+app.use('/users', userRoutes)
 
 // Run App
 app.listen(PORT, () => {

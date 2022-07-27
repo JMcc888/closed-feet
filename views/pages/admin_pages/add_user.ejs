@@ -1,0 +1,62 @@
+<%- include('../partials/headers&footers/bootstrap-header') %>
+<%- include('../partials/navs/apply_nav') %>
+<section id="add-user">
+    <div class="add-user-form-container">
+      <form
+        class="add-user-form"
+        action="/users/register"
+        method="POST"
+      >
+        <div class="form-text">
+          <h1 class="add-user-title">Add Client</h1>
+        </div>
+        <small id="passwordHelpInline" class="text-muted">
+          Enter a username
+        </small>
+        <input
+          type="text"
+          class="form-control"
+          name="username"
+          value=""
+          autofocus
+        />
+
+        <small id="passwordHelpInline" class="text-muted">
+            Enter an email
+          </small>
+          <input
+            type="email"
+            class="form-control"
+            name="email"
+            value=""
+            autofocus
+          />
+
+        <small id="passwordHelpInline" class="text-muted">
+          Enter a password
+        </small>
+
+        <input
+          type="password"
+          class="form-control"
+          name="password"
+          value=""
+          autofocus
+        />
+        <small id="passwordHelpInline" class="text-muted">
+          Select the user's role.
+        </small>
+
+        <select class="custom-select" name="role" value="">
+          <option data-hidden="true" value="">Select Role</option>
+          <option value="Client">Client</option>
+          <option value="Doctor">Doctor</option>
+        </select>
+
+        <button type="button submit" class="btn btn-primary form-control">
+          Add Client
+        </button>
+      </form>
+    </div>
+  </section>
+<%- include('../partials/headers&footers/footer') %>
