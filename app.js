@@ -55,6 +55,7 @@ const userRoutes = require('./routes/user_routes');
 
 // Use Routes
 app.use("/", homePageRoutes);
+// app.use('/users', userRoutes)
 
 // Run App
 app.listen(PORT, () => {
