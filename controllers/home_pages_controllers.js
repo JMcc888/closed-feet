@@ -30,5 +30,5 @@ exports.contact = async (req, res, next) => {
 
 // Login Page
 exports.login = async (req, res, next) => {
-  res.render('pages/homepages/login')
+  res.render('pages/homepages/login', { user: req.user })
 }

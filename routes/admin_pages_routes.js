@@ -1,9 +1,9 @@
 const express = require('express')
 const router = express.Router()
 
-const { addUser, usersPage } = require('../controllers/admin_pages_controller')
+const { addUser, usersPage, dashboard } = require('../controllers/admin_pages_controller')
 
-router.route('/')
+router.route('/').get(dashboard)
 router.route('/users').get(usersPage)
 router.route('/add-user').get(addUser)
 

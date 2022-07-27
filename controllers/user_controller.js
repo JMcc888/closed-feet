@@ -9,8 +9,11 @@ exports.login = passport.authenticate("local", {
 
 // User Logout
 exports.logout = async (req, res) => {
-    req.logout();
-    res.redirect("/");
+  // Has been updated in 0.6.0
+    req.logout(function(err) {
+      if (err) { return next(err); }
+      res.redirect('/');
+    });
 };
 
 // User Registration
@@ -23,10 +26,8 @@ exports.register = async (req, res, next) => {
     }),
     req.body.password,
   )
-    passport.authenticate("local")(req, res, () => {
+  // Removed passport authenticate so it doesn't log the user out
       res.redirect("/dashboard/users");
-    });
-  
   };
 
 // Current User Info
