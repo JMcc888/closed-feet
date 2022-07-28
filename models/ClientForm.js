@@ -8,8 +8,6 @@ const ClientFormSchema = new mongoose.Schema({
     },
     Middle: {
         type: String,
-
-
     },
     Last: {
         type: String,
@@ -28,7 +26,7 @@ const ClientFormSchema = new mongoose.Schema({
         match: [
             /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/,
           ],
-          required: True
+          required: true
     },
     HomePhone: {
         type: String
