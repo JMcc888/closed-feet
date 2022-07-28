@@ -622,9 +622,12 @@ section#login {
   display: flex;
   flex-direction: column;
   background-color: #ececec;
+  border-radius: 2vh
+}
+
+.login-form {
   width: 32rem;
   height: 38rem;
-  border-radius: 2vh
 }
 
 .login-form input,
@@ -808,6 +811,10 @@ section#users-dashboard {
   justify-content: center;
   height: 100vh;
   background-color: #ffaeae;
+}
+
+.add-user-form {
+  width: 70%;
 }
 
 .add-user-form input,
