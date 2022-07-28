@@ -7,5 +7,12 @@ exports.newClient = async (req, res, next) => {
 }
 
 // Get Forms
+exports.getClients = async (req, res, next) => {
+    const clients = await ClientForm.find().
+    exec().then((clients) => {
+        res.render('pages/admin_pages/applications', {client: clients})
+    })
+    
+}
 
 // Get Single Form
