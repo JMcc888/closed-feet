@@ -1,5 +1,25 @@
-<h1>Applications</h1>
+<%- include('../partials/headers&footers/bootstrap-header') %>
+<%- include('../partials/navs/apply_nav') %>
+<h1>Client Applications</h1>
+<h2>There are currently <%= forms.length%> applications.</h2>
 
-<p><%= client[0].First %></p>
+<div class="client-cards">
+<% forms.forEach((ap) => { %>
+    <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Application</h5>
+          <h6 class="card-subtitle mb-2 text-muted">Client Information:</h6>
+          <p class="card-text">Name: <%= ap.First%>, <%= ap.Middle%> <%= ap.Last%></p>
+          <a href="#" class="card-link">
+            <button class="btn btn-danger">Delete</button>
+          </a>
+          <a href="#" class="card-link">
+            <button class="btn btn-success">Details</button>
+          </a>
+        </div>
+      </div>
+<% }) %>
 
-<button>Export to PDF</button>
+    </div>
+
+<%- include('../partials/headers&footers/footer') %>
