@@ -31,3 +31,14 @@ exports.getClient = async (req, res, next) => {
       }
     );
 }
+
+// Get client edit form
+exports.editClientForm = async (req, res, next) => {
+    ClientForm.findById(req.params.id)
+    .exec()
+    .then((form) => {
+      res.render("pages/admin_pages/application_edit", { form, user: req.user });
+    }, (error) => {
+        console.log(error);
+      });
+}

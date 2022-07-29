@@ -2,14 +2,11 @@
 <%- include('../partials/navs/apply_nav') %>
 
 <div class="apply-client-form-wrap">
-    <h1><%= form.First %>'s Information</h1>
-    <a href="/applications/<%= form._id %>/edit">
-        <button class="btn btn-primary">Edit</button>
-      </a>
-      <button class="btn btn-danger">Delete</button>
+    <h1>Edit <%= form.First %>'s Information</h1>
         <form
             class="add-user-form"
-            action=""
+            action="/applications/client"
+            method="POST"
           >
             <small id="passwordHelpInline" class="text-muted">
                 Client's First Name
@@ -20,7 +17,6 @@
               name="First"
               value="<%= form.First%>"
               autofocus
-              readonly
             />
     
             <small id="passwordHelpInline" class="text-muted">
@@ -32,7 +28,6 @@
                 name="Middle"
                 value="<%= form.Middle %>"
                 autofocus
-                readonly
               />
     
             <small id="passwordHelpInline" class="text-muted">
@@ -45,7 +40,6 @@
               name="Last"
               value="<%= form.Last %>"
               autofocus
-              readonly
             />
     
             <small id="passwordHelpInline" class="text-muted">
@@ -58,7 +52,6 @@
                 name="DOB"
                 value="<%=form.DOB.toISOString().split("Z")[0]%>%>"
                 autofocus
-                readonly
               />
     
               <small id="passwordHelpInline" class="text-muted">
@@ -71,7 +64,6 @@
                 name="Address"
                 value="<%= form.Address %>"
                 autofocus
-                readonly
               />
     
               <small id="passwordHelpInline" class="text-muted">
@@ -84,7 +76,6 @@
                 name="Email"
                 value="<%= form.Email %>"
                 autofocus
-                readonly
                 placeholder="your_email@gmail.com"
               />
     
@@ -98,7 +89,6 @@
                 name="HomePhone"
                 value="<%= form.HomePhone %>"
                 autofocus
-                readonly
               />
     
               <small id="passwordHelpInline" class="text-muted">
@@ -111,7 +101,6 @@
                 name="MobilePhone"
                 value="<%= form.MobilePhone %>"
                 autofocus
-                readonly
               />
     
               <small id="passwordHelpInline" class="text-muted">
@@ -124,7 +113,6 @@
                 name="EmergencyContactName"
                 value="<%= form.EmergencyContactName %>"
                 autofocus
-                readonly
               />
     
               <small id="passwordHelpInline" class="text-muted">
@@ -137,7 +125,6 @@
                 name="EmergencyContactRelationship"
                 value="<%= form.EmergencyContactRelationship %>"
                 autofocus
-                readonly
               />
     
               <small id="passwordHelpInline" class="text-muted">
@@ -150,7 +137,6 @@
                 name="EmergencyContactNumber"
                 value="<%= form.EmergencyContactNumber %>"
                 autofocus
-                readonly
               />
     
               <small id="passwordHelpInline" class="text-muted">
@@ -163,7 +149,6 @@
                 name="PrimaryProvider"
                 value="<%= form.PrimaryProvider %>"
                 autofocus
-                readonly
               />
     
               <small id="passwordHelpInline" class="text-muted">
@@ -176,8 +161,9 @@
                 name="SecondaryProvider"
                 value="<%= form.SecondaryProvider %>"
                 autofocus
-                readonly
               />
+              <button class="btn btn-primary form-control">Edit</button>
+              <button class="btn btn-danger form-control">Delete</button>
           </form>
     </div>
 
