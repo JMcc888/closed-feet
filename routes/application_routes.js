@@ -2,9 +2,11 @@ const express = require('express')
 const router = express.Router()
 const { newClient, getClients, getClient, editClientForm, editClient, deleteClient } = require('../controllers/application_controller')
 
-router.route('/').get(getClients)
+const auth = require('../middleware/admin')
+
+router.route('/').get(auth, getClients)
 router.route('/client').post(newClient)
-router.route('/:id').get(getClient).put(editClient).delete(deleteClient)
-router.route('/:id/edit').get(editClientForm)
+router.route('/:id').get(auth, getClient).put(auth, editClient).delete(auth, deleteClient)
+router.route('/:id/edit').get(auth, editClientForm)
 
 module.exports = router

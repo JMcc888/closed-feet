@@ -30,7 +30,6 @@ const ClientFormSchema = new mongoose.Schema({
     },
     HomePhone: {
         type: String
-
     },
     MobilePhone: {
         type: String
