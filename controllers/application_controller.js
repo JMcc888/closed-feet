@@ -16,3 +16,18 @@ exports.getClients = async (req, res, next) => {
 }
 
 // Get Single Form
+exports.getClient = async (req, res, next) => {
+   const client = ClientForm.findById(req.params.id)
+    .exec()
+    .then(
+      (form) => {
+        res.render("pages/admin_pages/application_show", {
+          form,
+          user: req.user,
+        });
+      },
+      (error) => {
+        console.log(error);
+      }
+    );
+}

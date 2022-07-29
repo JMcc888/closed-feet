@@ -3,6 +3,7 @@
 <h1>Client Applications</h1>
 <h2>There are currently <%= forms.length%> applications.</h2>
 
+<!-- Card Wrapper -->
 <div class="client-cards">
 <% forms.forEach((ap) => { %>
     <div class="card">
@@ -11,10 +12,9 @@
           <h6 class="card-subtitle mb-2 text-muted">Client Information:</h6>
           <p class="card-text">Name: <%= ap.First%>, <%= ap.Middle%> <%= ap.Last%></p>
           <a href="#" class="card-link">
-            <button class="btn btn-danger">Delete</button>
-          </a>
-          <a href="#" class="card-link">
-            <button class="btn btn-success">Details</button>
+            <a href="/applications/<%= ap._id %>">
+                <button class="btn btn-success">Details</button>
+            </a>
           </a>
         </div>
       </div>
