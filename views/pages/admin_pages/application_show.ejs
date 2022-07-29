@@ -1,6 +1,19 @@
 <%- include('../partials/headers&footers/bootstrap-header') %>
 <%- include('../partials/navs/apply_nav') %>
 
-<p><%= form.First%></p>
+<h1>Client Information</h1>
+<p><%= form.First%> <%= form.Middle %> <%= form.Last %></p>
+<p><%= form.DOB %></p>
+<p><%= form.Address %></p>
+<p><%= form.Email %></p>
+<p><%= form.HomePhone %></p>
+<p><%= form.MobilePhone %></p>
+<p><%= form.EmergencyContactName %></p>
+<p><%= form.EmergencyContactRelationship %></p>
+<p><%= form.EmergencyContactNumber %></p>
+<p><%= form.PrimaryProvider %></p>
+<p><%= form.SecondaryProvider %></p>
+<p><%= form.createdAt %></p>
+
 
 <%- include('../partials/headers&footers/footer') %>
