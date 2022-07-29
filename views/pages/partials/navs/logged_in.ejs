@@ -1,6 +1,9 @@
 <% if(user) { %>
      <li><a href="/info"><%= user.username %></a></li>
     <li><a href="/users/logout">Logout</a></li>
+    <% if(user.role == process.env.AUTHORIZED) { %>
+      <li><a href="">Dashboard</a></li>
+   <% } %>
  <% } else { %>   
     <li><a href="/login">Login</a></li>
     <% } %> 
