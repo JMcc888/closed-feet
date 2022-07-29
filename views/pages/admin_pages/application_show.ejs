@@ -1,19 +1,183 @@
 <%- include('../partials/headers&footers/bootstrap-header') %>
 <%- include('../partials/navs/apply_nav') %>
 
-<h1>Client Information</h1>
-<p>Full Name: <%= form.First%> <%= form.Middle %> <%= form.Last %></p>
-<p>Date of Birth: <%= form.DOB %></p>
-<p>Home Address: <%= form.Address %></p>
-<p>Email Addresss: <%= form.Email %></p>
-<p>Home Phone: <%= form.HomePhone %></p>
-<p>Mobile Phone: <%= form.MobilePhone %></p>
-<p>Emergency Contact: <%= form.EmergencyContactName %></p>
-<p>Relationship to Client: <%= form.EmergencyContactRelationship %></p>
-<p>Emergency Contact Number: <%= form.EmergencyContactNumber %></p>
-<p>Primary Provider: <%= form.PrimaryProvider %></p>
-<p>Secondary Provider: <%= form.SecondaryProvider %></p>
-<p>Submitted: <%= form.createdAt %></p>
-
+<div class="apply-client-form-wrap">
+    <h1><%= form.First %>'s Information</h1>
+        <form
+            class="add-user-form"
+            action="/applications/client"
+            method="POST"
+          >
+            <small id="passwordHelpInline" class="text-muted">
+                Client's First Name
+            </small>
+            <input
+              type="text"
+              class="form-control"
+              name="First"
+              value="<%= form.First%>"
+              autofocus
+              readonly
+            />
+    
+            <small id="passwordHelpInline" class="text-muted">
+                Client's Middle Name
+              </small>
+              <input
+                type="text"
+                class="form-control"
+                name="Middle"
+                value="<%= form.Middle %>"
+                autofocus
+                readonly
+              />
+    
+            <small id="passwordHelpInline" class="text-muted">
+              Client's Last Name
+            </small>
+    
+            <input
+              type="text"
+              class="form-control"
+              name="Last"
+              value="<%= form.Last %>"
+              autofocus
+              readonly
+            />
+    
+            <small id="passwordHelpInline" class="text-muted">
+                Client's Date of Birth
+              </small>
+      
+              <input
+                type="datetime-local"
+                class="form-control"
+                name="DOB"
+                value="<%=form.DOB.toISOString().split("Z")[0]%>%>"
+                autofocus
+                readonly
+              />
+    
+              <small id="passwordHelpInline" class="text-muted">
+                Client's address
+              </small>
+      
+              <input
+                type="text"
+                class="form-control"
+                name="Address"
+                value="<%= form.Address %>"
+                autofocus
+                readonly
+              />
+    
+              <small id="passwordHelpInline" class="text-muted">
+                Client's email address
+              </small>
+      
+              <input
+                type="email"
+                class="form-control"
+                name="Email"
+                value="<%= form.Email %>"
+                autofocus
+                readonly
+                placeholder="your_email@gmail.com"
+              />
+    
+              <small id="passwordHelpInline" class="text-muted">
+                Client's Home Phone Number
+              </small>
+      
+              <input
+                type="text"
+                class="form-control"
+                name="HomePhone"
+                value="<%= form.HomePhone %>"
+                autofocus
+                readonly
+              />
+    
+              <small id="passwordHelpInline" class="text-muted">
+                Client's Mobile Phone Number
+              </small>
+      
+              <input
+                type="text"
+                class="form-control"
+                name="MobilePhone"
+                value="<%= form.MobilePhone %>"
+                autofocus
+                readonly
+              />
+    
+              <small id="passwordHelpInline" class="text-muted">
+                Client Emergency Contact Name
+              </small>
+      
+              <input
+                type="text"
+                class="form-control"
+                name="EmergencyContactName"
+                value="<%= form.EmergencyContactName %>"
+                autofocus
+                readonly
+              />
+    
+              <small id="passwordHelpInline" class="text-muted">
+                Contact Relationship to client
+              </small>
+      
+              <input
+                type="text"
+                class="form-control"
+                name="EmergencyContactRelationship"
+                value="<%= form.EmergencyContactRelationship %>"
+                autofocus
+                readonly
+              />
+    
+              <small id="passwordHelpInline" class="text-muted">
+                Emergency Contact Number
+              </small>
+      
+              <input
+                type="text"
+                class="form-control"
+                name="EmergencyContactNumber"
+                value="<%= form.EmergencyContactNumber %>"
+                autofocus
+                readonly
+              />
+    
+              <small id="passwordHelpInline" class="text-muted">
+                Medical/Health Insurance Provider
+              </small>
+      
+              <input
+                type="text"
+                class="form-control"
+                name="PrimaryProvider"
+                value="<%= form.PrimaryProvider %>"
+                autofocus
+                readonly
+              />
+    
+              <small id="passwordHelpInline" class="text-muted">
+                Secondary Medical/Insurance Provider
+              </small>
+      
+              <input
+                type="text"
+                class="form-control"
+                name="SecondaryProvider"
+                value="<%= form.SecondaryProvider %>"
+                autofocus
+                readonly
+              />
+              <button class="btn btn-primary form-control">Edit</button>
+              <button class="btn btn-danger form-control">Delete</button>
+          </form>
+    </div>
 
 <%- include('../partials/headers&footers/footer') %>
