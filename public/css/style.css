@@ -841,6 +841,13 @@ section#users-dashboard {
   background-color: navajowhite;
   }
 
+.apply-client-form-wrap button {
+  width: 70px;
+  height: 3rem;
+  margin: 0.5rem;
+  font-size: 1rem;
+}
+
 .apply-client-form {
   width: 55%;
 }
@@ -860,6 +867,18 @@ section#users-dashboard {
   width: 90%;
   align-self: center;
 }
+
+.modal-content {
+  width: 40rem;
+  height: 20rem;
+  margin: 0 auto;
+  font-size: 1.5rem;
+}
+
+.modal-content button {
+  padding: 1rem;
+}
+
 
 /*-*-*-*-**-*-*-*-**-*-*-*-**-*-*-*-* Media Queries *-*-*-*-**-*-*-*-**-*-*-*-**-*-*-*-*/
 
@@ -1135,6 +1154,10 @@ section#users-dashboard {
       .client-cards,
       .doctor-cards {
         padding: 0;
+      }
+
+      .modal-content {
+        width: 30rem;
       }
 
       }
