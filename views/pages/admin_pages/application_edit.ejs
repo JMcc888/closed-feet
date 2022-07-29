@@ -5,8 +5,9 @@
     <h1>Edit <%= form.First %>'s Information</h1>
         <form
             class="add-user-form"
-            action="/applications/client"
+            action="/applications/<%=form._id%>?_method=PUT" 
             method="POST"
+            
           >
             <small id="passwordHelpInline" class="text-muted">
                 Client's First Name
@@ -162,8 +163,9 @@
                 value="<%= form.SecondaryProvider %>"
                 autofocus
               />
-              <button class="btn btn-primary form-control">Edit</button>
-              <button class="btn btn-danger form-control">Delete</button>
+              <button type="button submit" class="btn btn-primary form-control">
+                Edit
+              </button>
           </form>
     </div>
 

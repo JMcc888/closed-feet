@@ -42,3 +42,30 @@ exports.editClientForm = async (req, res, next) => {
         console.log(error);
       });
 }
+
+// Edit client information
+exports.editClient = async (req, res, next) => {
+    const updated = {
+        First: req.body.First,
+        Middle: req.body.Middle,
+        Last: req.body.Last,
+        DOB: req.body.DOB,
+        Address: req.body.Address,
+        Email: req.body.Email,
+        HomePhone: req.body.HomePhone,
+        MobilePhone: req.body.MobilePhone,
+        EmergencyContactName: req.body.EmergencyContactName,
+        EmergencyContactRelationship: req.body.EmergencyContactRelationship,
+        EmergencyContactNumber: req.body.EmergencyContactNumber,
+        PrimaryProvider: req.body.PrimaryProvider,
+        SecondaryProvider: req.body.SecondaryProvider,
+      };
+      await ClientForm.findByIdAndUpdate(req.params.id, updated, { new: true })
+        .exec()
+        .then(() => {
+          res.redirect(`/applications/${req.params.id}`);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+}
