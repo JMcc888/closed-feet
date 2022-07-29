@@ -1,10 +1,13 @@
 <%- include('../partials/headers&footers/bootstrap-header') %>
 <%- include('../partials/navs/apply_nav') %>
-<h1>Client Applications</h1>
-<h2>There are currently <%= forms.length%> applications.</h2>
 
+<div class="cards-header">
+  <h1>Client Applications</h1>
+  <h2>There are currently <%= forms.length%> applications.</h2>
+</div>
 <!-- Card Wrapper -->
-<div class="client-cards">
+<div class="cards">
+  
 <% forms.forEach((ap) => { %>
     <div class="card">
         <div class="card-body">

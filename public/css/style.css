@@ -748,7 +748,7 @@ section#users-dashboard {
   flex-direction: column;
 }
 
-.client-header {
+.cards-header {
   background-color: #c5bbbb;
 }
 
@@ -756,7 +756,7 @@ section#users-dashboard {
   background-color: #ff6969;
 }
 
-.client-header,
+.cards-header,
 .doctor-header {
   display: flex;
   flex-direction: column;
@@ -765,7 +765,7 @@ section#users-dashboard {
   padding: 0.8rem;
 }
 
-.client-header h1 {
+.cards-header h1 {
   padding-bottom: 1rem;
 }
 
@@ -773,7 +773,7 @@ section#users-dashboard {
   padding-top: 1rem;
 }
 
-.client-cards,
+.cards,
 .doctor-cards {
   
   display: flex;
@@ -785,7 +785,7 @@ section#users-dashboard {
   align-items: center;
 }
 
-.client-cards {
+.cards {
   background-color: #c5bbbb;
 }
 
