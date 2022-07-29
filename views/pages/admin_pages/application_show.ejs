@@ -6,7 +6,34 @@
     <a href="/applications/<%= form._id %>/edit">
         <button class="btn btn-primary">Edit</button>
       </a>
-      <button class="btn btn-danger">Delete</button>
+      <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal">
+        Delete
+        </button>
+        
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Confirm Deletion</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                    Are you sure you want to delete this application?
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                  
+                  <!--Delete Action-->
+                  <form action="/applications/<%= form._id %>?_method=DELETE" method="POST">
+                    <button type="button submit" class="btn btn-danger">Delete</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
         <form
             class="add-user-form"
             action=""
@@ -181,4 +208,4 @@
           </form>
     </div>
 
-<%- include('../partials/headers&footers/footer') %>
+<%- include('../partials/headers&footers/bootstrap-footer') %>

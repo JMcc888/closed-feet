@@ -69,3 +69,18 @@ exports.editClient = async (req, res, next) => {
           console.log(err);
         });
 }
+
+// Delete Application
+exports.deleteClient = async (req, res, next) => {
+    ClientForm.findByIdAndDelete(req.params.id)
+    .exec()
+    .then(
+      (deletedclient) => {
+        console.log(("Deleted:", deletedclient));
+        res.redirect("/applications");
+      },
+      (error) => {
+        console.log(error);
+      }
+    );
+}
