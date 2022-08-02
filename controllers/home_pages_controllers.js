@@ -32,3 +32,8 @@ exports.contact = async (req, res, next) => {
 exports.login = async (req, res, next) => {
   res.render('pages/homepages/login', { user: req.user })
 }
+
+// Successful Application
+exports.success = async (req, res, next) => {
+  res.render('pages/homepages/success', { user: req.user})
+}

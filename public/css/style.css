@@ -879,6 +879,33 @@ section#users-dashboard {
   padding: 1rem;
 }
 
+/* Success Page content */
+.success {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.success-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+}
+
+.success a,
+.success p,
+.success h5 {
+  font-size: 20px;
+  color:grey
+}
+
+.success h5 {
+  color: #ac0202;
+}
+
 
 /*-*-*-*-**-*-*-*-**-*-*-*-**-*-*-*-* Media Queries *-*-*-*-**-*-*-*-**-*-*-*-**-*-*-*-*/
 
@@ -1158,6 +1185,10 @@ section#users-dashboard {
 
       .modal-content {
         width: 30rem;
+      }
+
+      .success-content {
+        width: 70%;
       }
 
       }

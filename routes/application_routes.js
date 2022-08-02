@@ -1,6 +1,6 @@
 const express = require('express')
 const router = express.Router()
-const { newClient, getClients, getClient, editClientForm, editClient, deleteClient } = require('../controllers/application_controller')
+const { newClient, getClients, getClient, editClientForm, editClient, deleteClient,} = require('../controllers/application_controller')
 
 const auth = require('../middleware/admin')
 
