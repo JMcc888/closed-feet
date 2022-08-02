@@ -906,6 +906,44 @@ section#users-dashboard {
   color: #ac0202;
 }
 
+.dashboard-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+
+.dashboard-body-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.dashboard-body h3 {
+  color: #ac0202;
+}
+
+.dashboard-options {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 80%;
+}
+
+.dashboard-option {
+  margin: 1rem;
+}
+
+/* .manage-content {
+  background-color: #ff6969;
+}
+
+.manage-users {
+  background-color: #0958c0;
+} */
+
 
 /*-*-*-*-**-*-*-*-**-*-*-*-**-*-*-*-* Media Queries *-*-*-*-**-*-*-*-**-*-*-*-**-*-*-*-*/
 
@@ -923,6 +961,13 @@ section#users-dashboard {
     section#showcase {
       align-items: flex-end;
     }
+  }
+
+  @media screen and (max-width: 818px) {
+
+    .dashboard-option {
+      width: 40%;
+    } 
   }
 
 /*-*-*-*-**-*-*-*-**-*-*-*-**-*-*-*-* (max-width:815px) Mark *-*-*-*-**-*-*-*-**-*-*-*-**-*-*-*-*/
@@ -978,6 +1023,10 @@ section#users-dashboard {
 
     header#header {
         position: absolute;
+    }
+
+    .dashboard-body-header {
+      margin-top: 4rem;
     }
 
     nav#header-main-nav {
@@ -1159,6 +1208,24 @@ section#users-dashboard {
         font-size: 2.5rem;  
       }
       .wrap p {
+        font-size: 2rem;
+      }
+    }
+
+    @media screen and (max-width: 512px) {
+      .dashboard-options {
+        width: 100%;
+      }
+      .dashboard-option {
+        width: 50%;
+        margin: 0.5rem;
+      }
+
+      .dashboard-body-header h2{
+        font-size: 1.5rem;
+      }
+
+      .dashboard-body-header h3 {
         font-size: 2rem;
       }
     }

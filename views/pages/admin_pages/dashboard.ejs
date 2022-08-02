@@ -1,21 +1,30 @@
 <%- include ('../partials/headers&footers/bootstrap-header') %>
 <%- include('../partials/navs/index_nav') %>
 <div class="dashboard-body">
-        <h1>Dashboard</h1>
+    <div class="dashboard-body-header">
+      <h1>Dashboard</h1>
         <h2>Welcome, <%= user.username %>. What would you like to do?</h2>
         <h3>Options</h3>
-        <div class="dashboard-options">
           <p>
             Here you can view and modify your data. Choose an option below.
           </p>
-          <div class="dashboard-option manage-users">
-            <h3>Manage Users</h3>
+    </div>
+        
+        <div class="dashboard-options">
+          
+          <div class="dashboard-option manage-users card">
+            <a href="/dashboard/users" class="dashboard-link card-header">
+              <h3>Manage Users</h3>
+            </a>
             <p>
               View and modify the site's current users and priveliges.
             </p>
           </div>
-          <div class="dashboard-option manage-content">
-            <h3>View Applications</h3>
+          <div class="dashboard-option manage-content card">
+            <a href="/applications" class="dashboard-link card-header">
+              <h3>View Applications</h3>
+            </a>
+            
             <p>
               View and modify current pending client care applications.
             </p>
