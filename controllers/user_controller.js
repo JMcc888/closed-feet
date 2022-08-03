@@ -35,26 +35,61 @@ exports.userInfo = async (req, res, next) => {
 
 }
 
-
-
 // CRUD Operations //
 
 // Get All Users
 exports.getUsers = async (req, res, next) => {
-  
+  const users = await User.find().
+    exec().then((users) => {
+        res.render('pages/admin_pages/users', {users, user: req.user})
+    })
 }
 
 // Get Single User
 exports.getUser = async (req, res, next) => {
-
+  const users = User.findById(req.params.id)
+  .exec()
+  .then(
+    (users) => {
+      res.render("pages/admin_pages/user_show", {
+        users,
+        user: req.user,
+      });
+    },
+    (error) => {
+      console.log(error);
+    }
+  );
 }
 
 // Update User
 exports.updateUser = async (req, res, next) => {
-
+const updated = {
+  username: req.body.username,
+  email: req.body.email,
+  role: req.body.role,
+  password: req.body.password,
+}
+  await User.findByIdAndUpdate(req.params.id, updated, { new: true })
+  .exec()
+  .then(() => {
+    res.redirect(`/user-settings/${req.params.id}`);
+  })
+  .catch((err) => {
+    console.log(err);
+  });
 }
 
 // Delete User
 exports.deleteUser = async (req, res, next) => {
-
+  User.findByIdAndDelete(req.params.id)
+  .exec()
+  .then(
+    () => { 
+      res.redirect("/user-settings");
+    },
+    (error) => {
+      console.log(error);
+    }
+  );
 }
