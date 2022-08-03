@@ -35,12 +35,26 @@ exports.userInfo = async (req, res, next) => {
 
 }
 
+
+
 // CRUD Operations //
 
 // Get All Users
+exports.getUsers = async (req, res, next) => {
+  
+}
 
 // Get Single User
+exports.getUser = async (req, res, next) => {
+
+}
 
 // Update User
+exports.updateUser = async (req, res, next) => {
+
+}
 
 // Delete User
+exports.deleteUser = async (req, res, next) => {
+
+}
