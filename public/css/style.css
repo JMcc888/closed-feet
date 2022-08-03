@@ -910,6 +910,29 @@ section#users-dashboard {
   color: #ac0202;
 }
 
+/* Messages */
+.message-card-wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.message-card {
+  width: 40%;
+}
+
+.message-card-info,
+.message-card-header {
+  color: #750404;
+}
+
+.message-text {
+  font-size: 1.2rem;
+  color:dimgray;
+}
 
 
 /* .manage-content {
@@ -1088,6 +1111,10 @@ section#users-dashboard {
 
       .footer p {
         font-size: calc(0.5rem + 0.8vh)
+      }
+
+      .message-card {
+        width: 70%;
       }
 
     }

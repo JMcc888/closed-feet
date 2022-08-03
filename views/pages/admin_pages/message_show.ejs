@@ -1,7 +1,22 @@
-<h1>
-  Individual Message
-</h1>
-<p><%= message.Name %></p>
-<p><%= message.Email %></p>
-<p><%= message.Phone %></p>
-<p><%= message.Message %></p>
+<%- include ('../partials/headers&footers/bootstrap-header') %>
+<%- include('../partials/navs/index_nav') %>
+
+<div class="message-card-wrap">
+  <h1>Message Details</h1>
+  
+ <div class="card message-card">
+  <div class="card-header">
+   <p class="message-card-header">Name: <%= message.Name %></p> 
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item message-card-info">Phone: <%= message.Number %></li>
+    <li class="list-group-item message-card-info">Email: <%= message.Email %></li>
+  </ul>
+  <p class="card-text message-text"><%= message.Message %></p>
+</div>
+
+</div>
+
+
+
+<%- include('../partials/headers&footers/footer') %>
