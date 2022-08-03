@@ -3,15 +3,16 @@
 <section id="contact-us">
     <div class="contact-us-body">
         <div class="contact-us-body-form">
-            <form class="contact-us-form" action="">
+            <form class="contact-us-form" action="/contact"
+            method="POST">
                 <label for="">Name</label>
-                <input type="text" placeholder="Name">
+                <input name="Name" type="text" placeholder="Name">
                 <label for="">Email</label>
-                <input type="text" placeholder="Email">
+                <input name="Email" type="text" placeholder="Email">
                 <label for="">Phone</label>
-                <input type="text" placeholder="Phone Number">
+                <input name="Number" type="text" placeholder="Phone Number">
                 <label for="">Message</label>
-                <textarea placeholder="Message"></textarea>
+                <textarea name="Message" placeholder="Message"></textarea>
                 <button type="submit">Submit</button>
                 </form>
         </div>
