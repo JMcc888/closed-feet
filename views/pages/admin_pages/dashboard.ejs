@@ -1,34 +1,42 @@
 <%- include ('../partials/headers&footers/bootstrap-header') %>
 <%- include('../partials/navs/index_nav') %>
-<div class="dashboard-body">
-    <div class="dashboard-body-header">
-      <h1>Dashboard</h1>
-        <h2>Welcome, <%= user.username %>. What would you like to do?</h2>
-        <h3>Options</h3>
-          <p>
-            Here you can view and modify your data. Choose an option below.
-          </p>
+<div class="cards-header">
+  <h1>Dashboard</h1>
+  <h2>Choose an option below:</h2>
+</div>
+<!-- Card Wrapper -->
+<div class="cards">
+  <!-- Manage Users Option -->
+  <a class="option-card" href="/dashboard/users">
+    <div class="card">
+    <div class="card-body dashboard-option">
+      <h5 class="card-title">Users Panel</h5>
+      <h6 class="card-subtitle mb-2 text-muted">Option Information:</h6>
+      <p class="card-text">View and modify users.</p>
     </div>
-        
-        <div class="dashboard-options">
-          
-          <div class="dashboard-option manage-users card">
-            <a href="/dashboard/users" class="dashboard-link card-header">
-              <h3>Manage Users</h3>
-            </a>
-            <p>
-              View and modify the site's current users and priveliges.
-            </p>
-          </div>
-          <div class="dashboard-option manage-content card">
-            <a href="/applications" class="dashboard-link card-header">
-              <h3>View Applications</h3>
-            </a>
-            
-            <p>
-              View and modify current pending client care applications.
-            </p>
-          </div>
-        </div>
-      </div>
-<%- include('../partials/headers&footers/bootstrap-footer') %>
+  </div>
+  </a>
+  <!-- View Applications -->
+  <a class="option-card" href="/applications">
+    <div class="card">
+    <div class="card-body dashboard-option">
+      <h5 class="card-title">Applications Panel</h5>
+      <h6 class="card-subtitle mb-2 text-muted">Option Information:</h6>
+      <p class="card-text">View and current applications.</p>
+    </div>
+  </div>
+  </a>
+  <!-- View Messages -->
+  <a class="option-card" href="/dashboard/users">
+    <div class="card">
+    <div class="card-body dashboard-option">
+      <h5 class="card-title">Messages</h5>
+      <h6 class="card-subtitle mb-2 text-muted">Option Information:</h6>
+      <p class="card-text">View messages submitted by users.</p>
+    </div>
+  </div>
+  </a>
+
+    </div>
+
+<%- include('../partials/headers&footers/footer') %>
