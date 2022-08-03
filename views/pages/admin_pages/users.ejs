@@ -121,81 +121,25 @@
 
     <!-- Doctor Header -->
     <div class="doctor-header">
-      <h2>Doctors</h2>
+      <h2>Actual Users</h2>
     </div>
+    
     <div class="doctor-cards">
-      <!-- Doctor Cards -->
-      <div class="card">
-        <div class="card-body">
-          <h5 class="card-title">Doctor</h5>
-          <h6 class="card-subtitle mb-2 text-muted">Doctor Information:</h6>
-          <p class="card-text">Name: First Last</p>
-          <p class="card-text">Patients: 12</p>
-          <a href="#" class="card-link">
-            <button class="btn btn-primary">Edit</button>
-          </a>
-          <a href="#" class="card-link">
-            <button class="btn btn-danger">Delete</button>
-          </a>
-          <a href="#" class="card-link">
-            <button class="btn btn-success">Details</button>
-          </a>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="card-body">
-          <h5 class="card-title">Doctor</h5>
-          <h6 class="card-subtitle mb-2 text-muted">Doctor Information:</h6>
-          <p class="card-text">Name: First Last</p>
-          <p class="card-text">Patients: 12</p>
-          <a href="#" class="card-link">
-            <button class="btn btn-primary">Edit</button>
-          </a>
-          <a href="#" class="card-link">
-            <button class="btn btn-danger">Delete</button>
-          </a>
-          <a href="#" class="card-link">
-            <button class="btn btn-success">Details</button>
-          </a>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="card-body">
-          <h5 class="card-title">Doctor</h5>
-          <h6 class="card-subtitle mb-2 text-muted">Doctor Information:</h6>
-          <p class="card-text">Name: First Last</p>
-          <p class="card-text">Patients: 12</p>
-          <a href="#" class="card-link">
-            <button class="btn btn-primary">Edit</button>
-          </a>
-          <a href="#" class="card-link">
-            <button class="btn btn-danger">Delete</button>
-          </a>
-          <a href="#" class="card-link">
-            <button class="btn btn-success">Details</button>
-          </a>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="card-body">
-          <h5 class="card-title">Doctor</h5>
-          <h6 class="card-subtitle mb-2 text-muted">Doctor Information:</h6>
-          <p class="card-text">Name: First Last</p>
-          <p class="card-text">Patients: 12</p>
-          <a href="#" class="card-link">
-            <button class="btn btn-primary">Edit</button>
-          </a>
-          <a href="#" class="card-link">
-            <button class="btn btn-danger">Delete</button>
-          </a>
-          <a href="#" class="card-link">
-            <button class="btn btn-success">Details</button>
-          </a>
-        </div>
-      </div>
+      <!-- Actual User Cards -->
+      <% users.forEach((u) => { %>
+        <div class="card">
+            <div class="card-body">
+              <h5 class="card-title"><%= u.username%></h5>
+              <h6 class="card-subtitle mb-2 text-muted">User Information:</h6>
+              <p class="card-text">email: <%= u.email%></p>
+              <a href="#" class="card-link">
+                <a href="/user-settings/<%= u._id %>">
+                    <button class="btn btn-success">Details</button>
+                </a>
+              </a>
+            </div>
+          </div>
+    <% }) %>
     </div>
   </section>
 <%- include('../partials/headers&footers/bootstrap-footer') %>
