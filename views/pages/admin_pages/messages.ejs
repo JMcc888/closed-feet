@@ -1,3 +1,28 @@
-<h1>
-  Messages Page  
-</h1>
+<%- include('../partials/headers&footers/bootstrap-header') %>
+<%- include('../partials/navs/apply_nav') %>
+
+<div class="cards-header">
+    <h1>Submitted Messages</h1>
+    <h2>You currently have <%= messages.length%> messages.</h2>
+  </div>
+  <!-- Card Wrapper -->
+  <div class="cards">
+    
+  <% messages.forEach((message) => { %>
+      <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Message</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Client Information:</h6>
+            <p class="card-text">Message from: <%= message.Name%></p>
+            <a href="#" class="card-link">
+              <a href="/messages/<%= message._id %>">
+                  <button class="btn btn-success">Details</button>
+              </a>
+            </a>
+          </div>
+        </div>
+  <% }) %>
+  
+      </div>
+
+<%- include('../partials/headers&footers/footer') %>
