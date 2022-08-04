@@ -37,3 +37,9 @@ exports.login = async (req, res, next) => {
 exports.success = async (req, res, next) => {
   res.render('pages/homepages/success', { user: req.user})
 }
+
+// Dashboard
+exports.dashboard = async (req, res, next) => {
+  res.render('pages/admin_pages/dashboard', { user: req.user })
+}
+

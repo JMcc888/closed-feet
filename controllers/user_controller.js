@@ -35,6 +35,11 @@ exports.userInfo = async (req, res, next) => {
 
 }
 
+// Add User Page
+exports.addUser = async (req, res, next) => {
+  res.render('pages/admin_pages/add_user', { user: req.user })
+}
+
 // CRUD Operations //
 
 // Get All Users
