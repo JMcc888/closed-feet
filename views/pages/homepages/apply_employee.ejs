@@ -1,13 +1,112 @@
-<%- include('../partials/headers&footers/header') %>
+<%- include('../partials/headers&footers/bootstrap-header') %>
 <%- include('../partials/navs/apply_nav') %>
-<h1>Service Provision Contact Form</h1>
-<form action="">
-    <p></p><input type="text">
-    <p></p><input type="text">
-    <p></p><input type="text">
-    <p></p><input type="text">
-    <p></p><input type="text">
-    <p></p><input type="text">
-    
-</form>
+
+<div class="apply-client-form-wrap">
+<h1>Application Contact Form</h1>
+
+    <form
+        class="add-user-form"
+        action="/job-applications"
+        method="POST"
+      >
+        <small id="passwordHelpInline" class="text-muted">
+            Client's First Name
+        </small>
+        <input
+          type="text"
+          class="form-control"
+          name="First"
+          value=""
+          autofocus
+        />
+
+        <small id="passwordHelpInline" class="text-muted">
+            Client's Middle Name
+          </small>
+          <input
+            type="text"
+            class="form-control"
+            name="Middle"
+            value=""
+            autofocus
+          />
+
+        <small id="passwordHelpInline" class="text-muted">
+          Client's Last Name
+        </small>
+
+        <input
+          type="text"
+          class="form-control"
+          name="Last"
+          value=""
+          autofocus
+        />
+
+        <small id="passwordHelpInline" class="text-muted">
+            Client's Date of Birth
+          </small>
+  
+          <input
+            type="date"
+            class="form-control"
+            name="DOB"
+            value=""
+            autofocus
+          />
+
+          <small id="passwordHelpInline" class="text-muted">
+            Client's address
+          </small>
+  
+          <input
+            type="text"
+            class="form-control"
+            name="Address"
+            value=""
+            autofocus
+          />
+
+          <small id="passwordHelpInline" class="text-muted">
+            Client's email address
+          </small>
+  
+          <input
+            type="email"
+            class="form-control"
+            name="Email"
+            value=""
+            autofocus
+            placeholder="your_email@gmail.com"
+          />
+
+          <small id="passwordHelpInline" class="text-muted">
+            Home Phone Number
+          </small>
+  
+          <input
+            type="text"
+            class="form-control"
+            name="HomePhone"
+            value=""
+            autofocus
+          />
+
+          <small id="passwordHelpInline" class="text-muted">
+            Client's Mobile Phone Number
+          </small>
+  
+          <input
+            type="text"
+            class="form-control"
+            name="MobilePhone"
+            value=""
+            autofocus
+          />
+
+        <button type="button submit" class="btn btn-primary form-control">
+          Submit
+        </button>
+      </form>
+</div>
 <%- include('../partials/headers&footers/footer') %>

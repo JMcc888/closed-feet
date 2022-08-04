@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 
-// Message post is handled in homepageroutes
+// Message post is handled in homepage routes
 const { getMessage, getMessages, deleteMessage } = require('../controllers/message_controller')
 
 const auth = require('../middleware/admin')

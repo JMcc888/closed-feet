@@ -1,0 +1,28 @@
+<%- include('../partials/headers&footers/bootstrap-header') %>
+<%- include('../partials/navs/apply_nav') %>
+
+<div class="cards-header">
+  <h1>Job Applications</h1>
+  <h2>There are currently <%= forms.length%> applications.</h2>
+</div>
+<!-- Card Wrapper -->
+<div class="cards">
+  
+<% forms.forEach((ap) => { %>
+    <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Application</h5>
+          <h6 class="card-subtitle mb-2 text-muted">Client Information:</h6>
+          <p class="card-text">Name: <%= ap.First%> <%= ap.Middle%> <%= ap.Last%></p>
+          <a href="#" class="card-link">
+            <a href="/job-applications/<%= ap._id %>">
+                <button class="btn btn-success">Details</button>
+            </a>
+          </a>
+        </div>
+      </div>
+<% }) %>
+
+    </div>
+
+<%- include('../partials/headers&footers/footer') %>

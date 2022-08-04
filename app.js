@@ -55,11 +55,13 @@ const userRoutes = require('./routes/user_routes')
 const clientApplicationRoutes = require('./routes/application_routes')
 const messageRoutes = require('./routes/message_routes')
 const userCRUDRoutes = require('./routes/DBuser_routes')
+const jobApplicationRoutes = require('./routes/job_routes')
 
 // Use Routes
 app.use("/", homePageRoutes);
 app.use('/users', userRoutes)
 app.use('/applications', clientApplicationRoutes)
+app.use('/job-applications', jobApplicationRoutes)
 app.use('/messages', messageRoutes)
 app.use('/user-settings', userCRUDRoutes)
 
