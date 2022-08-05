@@ -777,9 +777,7 @@ section#users-dashboard {
   padding-top: 1rem;
 }
 
-.cards,
-.doctor-cards {
-  
+.cards{
   display: flex;
   flex-direction: row;
   /* Remove at lower percentage */
@@ -795,6 +793,12 @@ section#users-dashboard {
 
 .main-cards {
   padding-bottom: 15rem;
+}
+
+.client-app-cards,
+.message-cards,
+.job-app-cards {
+  height: 90%;
 }
 
 
@@ -1240,7 +1244,8 @@ section#users-dashboard {
 
     @media screen and (max-width: 560px) {
       .main-cards {
-        padding-bottom: 0.5rem;
+        /* Keeps it full */
+        padding-bottom: 30%;
       }
     }
 
