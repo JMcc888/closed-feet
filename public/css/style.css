@@ -403,6 +403,10 @@ section#map-area {
     background-position: center;
 }
 
+iframe {
+  width: 100%;
+  height: 60vh;
+}
 section#map-area button {
   margin-top: 10px;
   margin-left: 10px;
@@ -756,10 +760,6 @@ section#users-dashboard {
   background-color: #c5bbbb;
 }
 
-.doctor-header {
-  background-color: #ff6969;
-}
-
 .cards-header,
 .doctor-header {
   display: flex;
@@ -767,14 +767,6 @@ section#users-dashboard {
   justify-content: center;
   align-items: center;
   padding: 0.8rem;
-}
-
-.cards-header h1 {
-
-}
-
-.doctor-header {
-  padding-top: 1rem;
 }
 
 .cards{
@@ -785,11 +777,9 @@ section#users-dashboard {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-}
-
-.cards {
   background-color: #c5bbbb;
 }
+
 
 .main-cards {
   padding-bottom: 15rem;
@@ -947,10 +937,14 @@ section#users-dashboard {
   align-items: center;
   padding-top: 4rem;
   padding-bottom: 4rem;
+  height: 90%;
+  background-color: rgb(245, 211, 160);
 }
 
 .message-card {
   width: 40%;
+  padding-bottom: 0.5rem;
+
 }
 
 .message-card-info,
