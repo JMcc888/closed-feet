@@ -57,7 +57,7 @@ exports.editJob = async (req, res, next) => {
       await Job.findByIdAndUpdate(req.params.id, updated, { new: true })
         .exec()
         .then(() => {
-          res.redirect(`/applications/${req.params.id}`);
+          res.redirect(`/job-applications/${req.params.id}`);
         })
         .catch((err) => {
           console.log(err);
@@ -71,7 +71,7 @@ exports.deleteJob = async (req, res, next) => {
     .then(
       (deletedjob) => {
         console.log(("Deleted:", deletedjob));
-        res.redirect("/applications");
+        res.redirect("/job-applications");
       },
       (error) => {
         console.log(error);

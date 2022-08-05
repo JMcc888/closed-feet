@@ -1,0 +1,53 @@
+<%- include('../partials/headers&footers/bootstrap-header') %>
+<%- include('../partials/navs/apply_nav') %>
+<div class="add-user-form-container">
+      
+    <form
+      class="add-user-form edit-user"
+      action="/user-settings/<%=users._id%>?_method=PUT" 
+      method="POST"
+    >
+      <div class="form-text">
+        <h1 class="add-user-title">User Information</h1>
+      </div>
+      <small id="passwordHelpInline" class="text-muted">
+        Enter a username
+      </small>
+      <input
+        type="text"
+        class="form-control"
+        name="username"
+        value="<%= users.username%>"
+        autofocus
+      />
+
+      <small id="passwordHelpInline" class="text-muted">
+          Enter an email
+        </small>
+        <input
+          type="email"
+          class="form-control"
+          name="email"
+          value="<%= users.email%>"
+          autofocus
+        />
+
+      <small id="passwordHelpInline" class="text-muted">
+        Select the user's role.
+      </small>
+
+      
+
+      <select class="custom-select" name="role" value="">
+        <option>Select Role</option>
+        <option <%= users.role === 'Client' ? 'selected' : '' %>>Client</option>
+        <option <%= users.role === 'Doctor' ? 'selected' : '' %>>Doctor</option>
+      </select>
+      <button type="button submit" class="btn btn-primary form-control">
+        Save Changes
+      </button>
+
+    </form>
+  </div>
+
+  <%- include('../partials/headers&footers/footer') %>

@@ -27,7 +27,7 @@ exports.register = async (req, res, next) => {
     req.body.password,
   )
   // Removed passport authenticate so it doesn't log the user out
-      res.redirect("/dashboard/users");
+      res.redirect("/user-settings");
   };
 
 // Current User Info
@@ -67,13 +67,23 @@ exports.getUser = async (req, res, next) => {
   );
 }
 
+// Update User Form
+exports.editUserForm = async (req, res, next) => {
+  User.findById(req.params.id)
+    .exec()
+    .then((users) => {
+      res.render("pages/admin_pages/user_edit", { users, user: req.user });
+    }, (error) => {
+        console.log(error);
+      });
+}
+
 // Update User
 exports.updateUser = async (req, res, next) => {
 const updated = {
   username: req.body.username,
   email: req.body.email,
   role: req.body.role,
-  password: req.body.password,
 }
   await User.findByIdAndUpdate(req.params.id, updated, { new: true })
   .exec()

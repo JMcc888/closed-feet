@@ -1,3 +1,84 @@
+<%- include('../partials/headers&footers/bootstrap-header') %>
+<%- include('../partials/navs/apply_nav') %>
+<div class="add-user-form-container">
+    <a href="/user-settings/<%= users._id %>/edit">
+        <button type="button submit" class="btn btn-primary form-control">
+        Edit
+      </button>
+      </a>
+      
 
+      <button type="button" class="btn btn-danger tab-buttons" data-toggle="modal" data-target="#exampleModal">
+        Delete
+      </button>
+    <form
+      class="add-user-form"
+      action="" 
+      method=""
+    >
+      <div class="form-text">
+        <h1 class="add-user-title">User Information</h1>
+      </div>
+      <small id="passwordHelpInline" class="text-muted">
+        Enter a username
+      </small>
+      <input
+        type="text"
+        class="form-control"
+        name="username"
+        value="<%= users.username%>"
+        autofocus
+        disabled
+      />
 
-<h1><%= users.username%></h1>
+      <small id="passwordHelpInline" class="text-muted">
+          Enter an email
+        </small>
+        <input
+          type="email"
+          class="form-control"
+          name="email"
+          value="<%= users.email%>"
+          autofocus
+          disabled
+        />
+
+      <small id="passwordHelpInline" class="text-muted">
+        Select the user's role.
+      </small>
+
+      <select class="custom-select" name="role" value="<%= users.username%>" disabled>
+        <option disabled>Select Role</option>
+        <option <%= users.role === 'Client' ? 'selected' : '' %>>Client</option>
+        <option <%= users.role === 'Doctor' ? 'selected' : '' %>>Doctor</option>
+      </select>
+
+    </form>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Confirm Deletion</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            Are you sure you want to delete this user?
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+          
+          <!--Delete Action-->
+          <form action="/user-settings/<%= users._id %>?_method=DELETE" method="POST">
+            <button type="button submit" class="btn btn-danger">Delete</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <%- include('../partials/headers&footers/bootstrap-footer') %>
