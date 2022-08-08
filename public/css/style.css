@@ -145,7 +145,7 @@ ul.header-main-nav-links li a:active {
 /* Shooooooooooooooooooooooowcase*/
 section#showcase{
     height: 100vh;
-    background-image: url(/img/DYA.gif);
+    background-image: url(/img/home.jpg);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -281,6 +281,20 @@ font-size: 3rem;
 
 }
 
+.services-companionship {
+  /* background-color: #c5bbbb; */
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.services-companionship h3 {
+  /* color: red; */
+  font-size: 1.5rem;
+}
+
 .info-content-block-para {
     font-size: 1.5rem;
     color: rgb(0, 0, 0);
@@ -290,14 +304,17 @@ section#services {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    background-color: #ffffff;
+    align-items: center;
+    width: 100%;
 }
 
-.services {
-  width: 50%;
+.services-content {
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  /* background-color: yellow; */
 }
 
 .other-services {
@@ -336,9 +353,11 @@ section#services {
 }
 
 ul.services-personal-care-li li {
-
+  display: flex;
+  align-items: center;
+  flex-direction: column;
   color: rgb(0, 0, 0);
-font-size: 1.7rem;
+font-size: 1.6rem;
 padding-bottom: 0.5rem;
 }
 
@@ -365,22 +384,22 @@ section#contact {
   align-items: center;
   justify-content: center;
   width: 80%;
-  margin: 4rem;
+  padding-top: 2rem;
+  margin: 0.5rem;
 }
 
-.contact h2 {
+.contact h2,
+.contact h3 {
   padding-bottom: 0.3rem;
 }
 
 .contact-us-headers {
   font-size: 2rem;
-    color: rgb(0, 0, 0);
 }
 
 .contact-us-para, .contact-us-number {
   font-size: 1.5rem;
   padding-bottom: 0.5rem;
-  color: rgb(0, 0, 0);
 
 }
 
@@ -396,12 +415,6 @@ section#contact {
   height: 40px;
 }
 
-section#map-area {
-  height: 60vh;
-    background-image: url(/img/pglang.gif);
-    background-size: cover;
-    background-position: center;
-}
 
 iframe {
   width: 100%;
@@ -460,7 +473,15 @@ section#about-us-content {
 }
 
 .about-us-item-1 {
-  flex-direction: row-reverse;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-us-item-2,
+.about-us-item-3 {
+  align-items: center;
+  justify-content: center;
 }
 
 .about-us-item-text {
@@ -469,7 +490,7 @@ section#about-us-content {
   align-items: center;
   flex-direction: column;
   padding: 10px;
-  width: 50%;
+  width: 80%;
 }
 
 .about-us-item-title {
@@ -481,7 +502,7 @@ section#about-us-content {
 }
 
 .about-us-img {
-  width: 50%;
+  width: 70%;
 }
 
 .about-us-closing {
@@ -601,7 +622,7 @@ section#login {
   width: 100%;
   display: flex;
   justify-content: center;
-  background-image: url(/img/thanos.gif);
+  background-image: url(/img/incu.jpg);
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -1002,9 +1023,11 @@ section#users-dashboard {
     }
 
     .info-content-main-title {
-        color: rgb(255, 255, 255);
         font-size: 2rem;
         }
+    .secvice-title {
+      font-size: 10px;
+    }
     .other-services,
     .services-dementia,
     .services-personal-care,
@@ -1148,6 +1171,29 @@ section#users-dashboard {
         width: 70%;
       }
 
+      .info-content-block {
+        width: 80%;
+    }
+
+    }
+
+    @media screen and (max-width: 850px) {
+      .about-us-item {
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+       }
+
+       .about-us-title {
+        padding:0;
+       }
+
+       .about-us-item-1 {
+        flex-direction: column-reverse;
+       }
+       
+       
     }
 
     @media screen and (max-width: 760px) {
@@ -1159,6 +1205,10 @@ section#users-dashboard {
       width: 100%;
       justify-content: center;
       align-items: center;
+     }
+
+     .about-us-item-1 {
+      flex-direction: column-reverse;
      }
      
      .about-us-item-text {
@@ -1174,6 +1224,8 @@ section#users-dashboard {
     .apply-body-employee-text {
       width: 90%;
     }
+
+
     }
 
     @media screen and (max-width: 400px) {
@@ -1183,6 +1235,8 @@ section#users-dashboard {
       .about-us-title {
         font-size: 2.2rem;
       }
+
+
     }
 
     @media screen and (max-width: 1080px) {
@@ -1269,6 +1323,23 @@ section#users-dashboard {
 
       .success-content {
         width: 70%;
+      }
+
+      .info-content-block-title,
+      .service-title {
+        font-size: 1.4rem
+      }
+
+      .contact-us-headers {
+        font-size: 1.;
+      }
+
+      .contact {
+        width: 90%;
+      }
+
+      .services-dementia p {
+        font-size: 1.6rem;
       }
 
       }
